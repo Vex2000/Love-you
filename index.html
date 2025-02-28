@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keres, My Eternal Love</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(to bottom, #ffcccc, #ff99cc);
+            color: white;
+            font-family: 'Times New Roman', serif;
+            overflow: hidden;
+        }
+
+        /* Romantic Poem Section */
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(255, 0, 102, 0.3);
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(255, 0, 102, 0.8);
+            animation: glow 3s infinite alternate;
+        }
+
+        /* Glowing Effect */
+        @keyframes glow {
+            0% { box-shadow: 0px 0px 20px rgba(255, 0, 102, 0.8); }
+            100% { box-shadow: 0px 0px 30px rgba(255, 0, 102, 1); }
+        }
+
+        /* Poem Text */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        /* Falling Roses Animation */
+        .rose {
+            position: absolute;
+            top: -100px;
+            width: 40px;
+            height: 40px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0px) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Romantic Poem Section -->
+    <div class="container">
+        <h1>Keres, My Eternal Love</h1>
+        <p>
+            Keres, your name is a whisper of love,<br>
+            A melody sent from the heavens above.<br>
+            Like roses in bloom with petals so fair,<br>
+            Your beauty and kindness dance in the air.<br><br>
+
+            Your eyes shine brighter than the moonlit sea,<br>
+            A love so deep, it sets my heart free.<br>
+            In every moment, in every dream,<br>
+            You are my forever, my endless theme.<br><br>
+
+            With every petal, with every sigh,<br>
+            I promise to love you till the stars fade from the sky.
+        </p>
+    </div>
+
+    <!-- Falling Roses Effect -->
+    <script>
+        function createRose() {
+            let rose = document.createElement("img");
+            rose.src = "https://upload.wikimedia.org/wikipedia/commons/5/5f/Red_rose.svg"; 
+            rose.className = "rose";
+            rose.style.left = Math.random() * window.innerWidth + "px";
+            rose.style.animationDuration = (Math.random() * 3 + 2) + "s"; 
+            document.body.appendChild(rose);
+
+            setTimeout(() => { rose.remove(); }, 5000);
+        }
+
+        setInterval(createRose, 500);
+    </script>
+
+</body>
+</html>
