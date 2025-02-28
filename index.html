@@ -46,7 +46,7 @@
         .rose {
             position: absolute;
             top: -100px;
-            width: 40px;
+            width: 25px; /* Reduced size */
             height: auto;
             animation: fall linear infinite;
         }
@@ -112,7 +112,7 @@
             setTimeout(() => { rose.remove(); }, 5000);
         }
 
-        setInterval(createRose, 500);
+        setInterval(createRose, 300); // Increased number of roses
     </script>
 
 </body>
